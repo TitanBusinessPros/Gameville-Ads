@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advertising Options on Gameville.games</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: #2c3e50;
+            padding: 15px 0;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        nav li {
+            margin: 0 15px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #fdbb2d;
+        }
+        
+        /* Main Content */
+        .intro {
+            text-align: center;
+            padding: 50px 0;
+            background-color: white;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .intro h2 {
+            color: #1a2a6c;
+            margin-bottom: 20px;
+        }
+        
+        /* Services Section */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-header {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .service-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .service-price {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        
+        .service-body {
+            padding: 25px;
+        }
+        
+        .service-body p {
+            margin-bottom: 20px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.3s;
+        }
+        
+        .cta-button:hover {
+            background: linear-gradient(135deg, #b21f1f, #1a2a6c);
+            transform: scale(1.05);
+        }
+        
+        /* Other Services Section */
+        .other-services {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            margin: 40px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .other-services h2 {
+            color: #1a2a6c;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-bottom: 30px;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin: 15px;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 20px;
+            color: #fdbb2d;
+        }
+        
+        .footer-section a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section a:hover {
+            color: #fdbb2d;
+        }
+        
+        .copyright {
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                margin: 5px 0;
+            }
+            
+            .services {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Advertising Options On www.gameville.games</h1>
+            <p>Reach thousands of gamers with our targeted advertising solutions</p>
+        </div>
+    </header>
+    
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#basic-ad">Basic Ad</a></li>
+                <li><a href="#restart-ad">Restart Ad</a></li>
+                <li><a href="#custom-characters">Custom Characters</a></li>
+                <li><a href="#game-creation">Game Creation</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Introduction -->
+        <section class="intro">
+            <h2>Maximize Your Brand's Reach in the Gaming World</h2>
+            <p>At www.gameville.games we offer unique advertising opportunities to connect your brand with engaged gamers. Our platform provides targeted exposure that delivers results.</p>
+            <p>Choose from our advertising packages below or contact us for custom solutions.</p>
+        </section>
+        
+        <!-- Services -->
+        <section class="services">
+            <!-- Service 1: Basic Ad -->
+            <div class="service-card" id="basic-ad">
+                <div class="service-header">
+                    <h3>Basic Ad Placement</h3>
+                    <div class="service-price">$100</div>
+                    <p>Limited Time Offer</p>
+                </div>
+                <div class="service-body">
+                    <p>Place your logo or ad on Gameville.games where potential customers can click to visit your website.</p>
+                    <ul>
+                        <li>Highly visible placement</li>
+                        <li>Direct link to your website</li>
+                        <li>Lasts for one full year</li>
+                        <li>Simple setup process</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">Get Started</a>
+                </div>
+            </div>
+            
+            <!-- Service 2: Restart Ad -->
+            <div class="service-card" id="restart-ad">
+                <div class="service-header">
+                    <h3>Restart Ad</h3>
+                    <div class="service-price">$250</div>
+                    <p>Limited Time Offer</p>
+                </div>
+                <div class="service-body">
+                    <p>Show your 10-30 second ad every time a player restarts a specific game.</p>
+                    <p><strong>Example:</strong> If someone advertises for the Chess Game, their ad will show every time a player starts a new chess game.</p>
+                    <ul>
+                        <li>High engagement during natural breaks</li>
+                        <li>Target specific game audiences</li>
+                        <li>Customizable ad length</li>
+                        <li>Premium placement</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">Get Started</a>
+                </div>
+            </div>
+            
+            <!-- Service 3: Custom Characters -->
+            <div class="service-card" id="custom-characters">
+                <div class="service-header">
+                    <h3>Custom Characters</h3>
+                    <div class="service-price">$50 Consultation</div>
+                    <p>Applied to Final Service</p>
+                </div>
+                <div class="service-body">
+                    <p>Integrate your brand directly into our games with custom characters and elements.</p>
+                    <p><strong>Example:</strong> A diner could make a planet in our space game look like a burger, or apply their logo as a character in several games.</p>
+                    <ul>
+                        <li>Deep brand integration</li>
+                        <li>Memorable user experience</li>
+                        <li>Multiple game options</li>
+                        <li>Custom quote after consultation</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">Schedule Consultation</a>
+                </div>
+            </div>
+            
+            <!-- Service 4: Game Creation -->
+            <div class="service-card" id="game-creation">
+                <div class="service-header">
+                    <h3>Custom Game Creation</h3>
+                    <div class="service-price">$250 Consultation</div>
+                    <p>Applied to Final Service</p>
+                </div>
+                <div class="service-body">
+                    <p>We create custom games for any business in any industry.</p>
+                    <ul>
+                        <li>Tailored to your brand and objectives</li>
+                        <li>Multiple platform compatibility</li>
+                        <li>Engaging user experiences</li>
+                        <li>Full development lifecycle</li>
+                        <li>Custom quote after consultation</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">Schedule Consultation</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Other Services -->
+        <section class="other-services">
+            <h2>Additional Services</h2>
+            <p>Looking for website development, software solutions, or automation services? Our brand www.okiewebsiteguy.com specializes in creating powerful digital solutions for businesses of all sizes.</p>
+            <p>Visit <a href="https://www.okiewebsiteguy.com" target="_blank">www.okiewebsiteguy.com</a> to learn more about our comprehensive web and software development services.</p>
+        </section>
+    </div>
+    
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Phone: 405-998-7979</p>
+                    <p>Email: titanbusinesspros@gmail.com</p>
+                    <p>https://www.facebook.com/TitanBusinessPros/</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <p><a href="#basic-ad">Basic Ad</a></p>
+                    <p><a href="#restart-ad">Restart Ad</a></p>
+                    <p><a href="#custom-characters">Custom Characters</a></p>
+                    <p><a href="#game-creation">Game Creation</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>Titan Business Pros LLC</p>
+                    <p>Creators of Gameville.games</p>
+                    <p>Professional web and game development services</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Titan Business Pros LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
