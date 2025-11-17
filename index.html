@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advertising Options on Gameville.games</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Global Styles */
         * {
@@ -13,9 +14,17 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
+        :root {
+            --primary: #1a2a6c;
+            --secondary: #b21f1f;
+            --accent: #fdbb2d;
+            --light: #f5f7fa;
+            --dark: #2c3e50;
+        }
+        
         body {
-            background-color: #f5f7fa;
-            color: #333;
+            background-color: var(--light);
+            color: var(--dark);
             line-height: 1.6;
         }
         
@@ -26,9 +35,22 @@
             padding: 20px;
         }
         
+        section {
+            padding: 60px 0;
+        }
+        
+        h1, h2, h3, h4 {
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
         /* Header Styles */
         header {
-            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
             padding: 40px 0;
             text-align: center;
@@ -38,6 +60,7 @@
         header h1 {
             font-size: 2.5rem;
             margin-bottom: 10px;
+            color: white;
         }
         
         header p {
@@ -48,8 +71,11 @@
         
         /* Navigation */
         nav {
-            background-color: #2c3e50;
+            background-color: var(--dark);
             padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
         
         nav ul {
@@ -71,7 +97,7 @@
         }
         
         nav a:hover {
-            color: #fdbb2d;
+            color: var(--accent);
         }
         
         /* Main Content */
@@ -82,11 +108,6 @@
             margin: 20px 0;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-        
-        .intro h2 {
-            color: #1a2a6c;
-            margin-bottom: 20px;
         }
         
         /* Services Section */
@@ -103,6 +124,7 @@
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
         }
         
         .service-card:hover {
@@ -110,8 +132,22 @@
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
         
+        .service-card.featured::before {
+            content: "Most Popular";
+            position: absolute;
+            top: 15px;
+            right: -30px;
+            background: var(--accent);
+            color: var(--dark);
+            padding: 5px 30px;
+            transform: rotate(45deg);
+            font-weight: bold;
+            font-size: 0.8rem;
+            z-index: 10;
+        }
+        
         .service-header {
-            background: linear-gradient(135deg, #1a2a6c, #b21f1f);
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
             padding: 20px;
             text-align: center;
@@ -120,11 +156,17 @@
         .service-header h3 {
             font-size: 1.5rem;
             margin-bottom: 10px;
+            color: white;
         }
         
         .service-price {
             font-size: 1.8rem;
             font-weight: bold;
+        }
+        
+        .service-price-detail {
+            font-size: 0.9rem;
+            opacity: 0.9;
         }
         
         .service-body {
@@ -135,19 +177,42 @@
             margin-bottom: 20px;
         }
         
+        .service-features {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .service-features li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+        
+        .service-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .service-features li i {
+            color: var(--accent);
+            margin-right: 10px;
+        }
+        
         .cta-button {
             display: inline-block;
-            background: linear-gradient(135deg, #1a2a6c, #b21f1f);
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
             padding: 12px 25px;
             border-radius: 5px;
             text-decoration: none;
             font-weight: bold;
             transition: background 0.3s, transform 0.3s;
+            text-align: center;
+            width: 100%;
         }
         
         .cta-button:hover {
-            background: linear-gradient(135deg, #b21f1f, #1a2a6c);
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
             transform: scale(1.05);
         }
         
@@ -161,14 +226,12 @@
         }
         
         .other-services h2 {
-            color: #1a2a6c;
-            margin-bottom: 20px;
             text-align: center;
         }
         
         /* Footer */
         footer {
-            background-color: #2c3e50;
+            background-color: var(--dark);
             color: white;
             padding: 40px 0;
             text-align: center;
@@ -189,7 +252,7 @@
         
         .footer-section h3 {
             margin-bottom: 20px;
-            color: #fdbb2d;
+            color: var(--accent);
         }
         
         .footer-section a {
@@ -199,7 +262,7 @@
         }
         
         .footer-section a:hover {
-            color: #fdbb2d;
+            color: var(--accent);
         }
         
         .copyright {
@@ -225,6 +288,11 @@
             .services {
                 grid-template-columns: 1fr;
             }
+            
+            .service-card.featured::before {
+                font-size: 0.7rem;
+                right: -35px;
+            }
         }
     </style>
 </head>
@@ -242,6 +310,7 @@
         <div class="container">
             <ul>
                 <li><a href="#basic-ad">Basic Ad</a></li>
+                <li><a href="#sponsored-by">Sponsored By</a></li>
                 <li><a href="#restart-ad">Restart Ad</a></li>
                 <li><a href="#custom-characters">Custom Characters</a></li>
                 <li><a href="#game-creation">Game Creation</a></li>
@@ -255,7 +324,7 @@
         <!-- Introduction -->
         <section class="intro">
             <h2>Maximize Your Brand's Reach in the Gaming World</h2>
-            <p>At www.gameville.games we offer unique advertising opportunities to connect your brand with engaged gamers. Our platform provides targeted exposure that delivers results.</p>
+            <p>Gameville.games offers unique advertising opportunities to connect your brand with engaged gamers. With millions of monthly players, our platform provides targeted exposure that delivers results.</p>
             <p>Choose from our advertising packages below or contact us for custom solutions.</p>
         </section>
         
@@ -266,75 +335,96 @@
                 <div class="service-header">
                     <h3>Basic Ad Placement</h3>
                     <div class="service-price">$100</div>
-                    <p>Limited Time Offer</p>
+                    <div class="service-price-detail">Limited Time Offer</div>
                 </div>
                 <div class="service-body">
                     <p>Place your logo or ad on Gameville.games where potential customers can click to visit your website.</p>
-                    <ul>
-                        <li>Highly visible placement</li>
-                        <li>Direct link to your website</li>
-                        <li>Lasts for one full year</li>
-                        <li>Simple setup process</li>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Highly visible placement</li>
+                        <li><i class="fas fa-check"></i> Direct link to your website</li>
+                        <li><i class="fas fa-check"></i> Lasts for one full year</li>
+                        <li><i class="fas fa-check"></i> Simple setup process</li>
                     </ul>
                     <a href="#contact" class="cta-button">Get Started</a>
                 </div>
             </div>
             
-            <!-- Service 2: Restart Ad -->
+            <!-- Service 2: Sponsored By -->
+            <div class="service-card featured" id="sponsored-by">
+                <div class="service-header">
+                    <h3>Sponsored By Placement</h3>
+                    <div class="service-price">$150</div>
+                    <div class="service-price-detail">Less than $0.50 per day!</div>
+                </div>
+                <div class="service-body">
+                    <p>Put your company name and logo at the top of the game for one full year. Players will see "Sponsored by [Your Brand]" every time they play.</p>
+                    <p><strong>Amazing Value:</strong> Only $150 for a full year works out to just <strong>$0.41 per day</strong> for continuous brand exposure!</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Premium top placement in games</li>
+                        <li><i class="fas fa-check"></i> "Sponsored by [Your Brand]" display</li>
+                        <li><i class="fas fa-check"></i> Full year of continuous visibility</li>
+                        <li><i class="fas fa-check"></i> High engagement with active players</li>
+                        <li><i class="fas fa-check"></i> Incredible value at less than 50¢/day</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">Get This Amazing Deal</a>
+                </div>
+            </div>
+            
+            <!-- Service 3: Restart Ad -->
             <div class="service-card" id="restart-ad">
                 <div class="service-header">
                     <h3>Restart Ad</h3>
                     <div class="service-price">$250</div>
-                    <p>Limited Time Offer</p>
+                    <div class="service-price-detail">Limited Time Offer</div>
                 </div>
                 <div class="service-body">
                     <p>Show your 10-30 second ad every time a player restarts a specific game.</p>
                     <p><strong>Example:</strong> If someone advertises for the Chess Game, their ad will show every time a player starts a new chess game.</p>
-                    <ul>
-                        <li>High engagement during natural breaks</li>
-                        <li>Target specific game audiences</li>
-                        <li>Customizable ad length</li>
-                        <li>Premium placement</li>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> High engagement during natural breaks</li>
+                        <li><i class="fas fa-check"></i> Target specific game audiences</li>
+                        <li><i class="fas fa-check"></i> Customizable ad length (10-30 seconds)</li>
+                        <li><i class="fas fa-check"></i> Premium placement</li>
                     </ul>
                     <a href="#contact" class="cta-button">Get Started</a>
                 </div>
             </div>
             
-            <!-- Service 3: Custom Characters -->
+            <!-- Service 4: Custom Characters -->
             <div class="service-card" id="custom-characters">
                 <div class="service-header">
                     <h3>Custom Characters</h3>
                     <div class="service-price">$50 Consultation</div>
-                    <p>Applied to Final Service</p>
+                    <div class="service-price-detail">Applied to Final Service</div>
                 </div>
                 <div class="service-body">
                     <p>Integrate your brand directly into our games with custom characters and elements.</p>
-                    <p><strong>Example:</strong> A diner could make a planet in our space game look like a burger, or apply their logo as a character in several games.</p>
-                    <ul>
-                        <li>Deep brand integration</li>
-                        <li>Memorable user experience</li>
-                        <li>Multiple game options</li>
-                        <li>Custom quote after consultation</li>
+                    <p><strong>Example:</strong> A diner could make a planet in our space game look like a burger, or apply your logo as a character in several games.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Deep brand integration</li>
+                        <li><i class="fas fa-check"></i> Memorable user experience</li>
+                        <li><i class="fas fa-check"></i> Multiple game options</li>
+                        <li><i class="fas fa-check"></i> Custom quote after consultation</li>
                     </ul>
                     <a href="#contact" class="cta-button">Schedule Consultation</a>
                 </div>
             </div>
             
-            <!-- Service 4: Game Creation -->
+            <!-- Service 5: Game Creation -->
             <div class="service-card" id="game-creation">
                 <div class="service-header">
                     <h3>Custom Game Creation</h3>
                     <div class="service-price">$250 Consultation</div>
-                    <p>Applied to Final Service</p>
+                    <div class="service-price-detail">Applied to Final Service</div>
                 </div>
                 <div class="service-body">
                     <p>We create custom games for any business in any industry.</p>
-                    <ul>
-                        <li>Tailored to your brand and objectives</li>
-                        <li>Multiple platform compatibility</li>
-                        <li>Engaging user experiences</li>
-                        <li>Full development lifecycle</li>
-                        <li>Custom quote after consultation</li>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Tailored to your brand and objectives</li>
+                        <li><i class="fas fa-check"></i> Multiple platform compatibility</li>
+                        <li><i class="fas fa-check"></i> Engaging user experiences</li>
+                        <li><i class="fas fa-check"></i> Full development lifecycle</li>
+                        <li><i class="fas fa-check"></i> Custom quote after consultation</li>
                     </ul>
                     <a href="#contact" class="cta-button">Schedule Consultation</a>
                 </div>
@@ -344,7 +434,7 @@
         <!-- Other Services -->
         <section class="other-services">
             <h2>Additional Services</h2>
-            <p>Looking for website development, software solutions, or automation services? Our brand www.okiewebsiteguy.com specializes in creating powerful digital solutions for businesses of all sizes.</p>
+            <p>Looking for website development, software solutions, or automation services? Our parent company Titan Business Pros LLC specializes in creating powerful digital solutions for businesses of all sizes.</p>
             <p>Visit <a href="https://www.okiewebsiteguy.com" target="_blank">www.okiewebsiteguy.com</a> to learn more about our comprehensive web and software development services.</p>
         </section>
     </div>
@@ -355,13 +445,14 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Contact Us</h3>
-                    <p>Phone: 405-998-7979</p>
-                    <p>Email: titanbusinesspros@gmail.com</p>
-                    <p>https://www.facebook.com/TitanBusinessPros/</p>
+                    <p><i class="fas fa-phone"></i> Phone: 405-998-7979</p>
+                    <p><i class="fas fa-envelope"></i> Email: info@gameville.games</p>
+                    <p><i class="fas fa-globe"></i> www.okiewebsiteguy.com</p>
                 </div>
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <p><a href="#basic-ad">Basic Ad</a></p>
+                    <p><a href="#sponsored-by">Sponsored By</a></p>
                     <p><a href="#restart-ad">Restart Ad</a></p>
                     <p><a href="#custom-characters">Custom Characters</a></p>
                     <p><a href="#game-creation">Game Creation</a></p>
@@ -378,5 +469,32 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Highlight the "Sponsored By" service value
+        document.addEventListener('DOMContentLoaded', function() {
+            const sponsoredCard = document.getElementById('sponsored-by');
+            sponsoredCard.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            sponsoredCard.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(-10px)';
+            });
+        });
+    </script>
 </body>
 </html>
